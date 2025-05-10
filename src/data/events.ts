@@ -1,3 +1,5 @@
+import { Users, Gift, Building2, PartyPopper, Coffee, Wine } from 'lucide-react';
+
 export const eventServices: EventService[] = [
   {
     id: 'wedding-ushering',
