@@ -43,3 +43,22 @@ export const eventServices: EventService[] = [
     icon: 'Wine'
   }
 ];
+
+export const getIconComponent = (iconName: string) => {
+  switch (iconName) {
+    case 'Users':
+      return Users;
+    case 'Gift':
+      return Gift;
+    case 'Building2':
+      return Building2;
+    case 'PartyPopper':
+      return PartyPopper;
+    case 'Coffee':
+      return Coffee;
+    case 'Wine':
+      return Wine;
+    default:
+      return Gift;
+  }
+};
