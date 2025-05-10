@@ -5,7 +5,8 @@ export const eventServices: EventService[] = [
     id: 'wedding-ushering',
     name: 'Wedding Ushering',
     description: 'Professional ushering services for your special day, ensuring a smooth and memorable experience for you and your guests.',
-    imageUrl: '/media/img1.jpg', // Use absolute path
+    imageUrl: '/media/5.jpg', // Use absolute path
+    
     icon: 'Users'
   },
   {
@@ -33,7 +34,7 @@ export const eventServices: EventService[] = [
     id: 'juice-bars',
     name: 'Juice Bars',
     description: 'Offer your guests a refreshing selection of our signature fresh juices and smoothies at your next event.',
-    imageUrl: '/media/5.jpg', // Use absolute path
+    imageUrl: '/media/img1.jpg', // Use absolute path
     icon: 'Wine'
   },
   {
