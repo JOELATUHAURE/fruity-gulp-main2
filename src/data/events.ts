@@ -1,5 +1,5 @@
 import { EventService } from '../types';
-import { Users, Gift, Building2, PartyPopper, Coffee, Wine, Cocktail } from 'lucide-react';
+import { Users, Gift, Building2, PartyPopper, Coffee, Wine } from 'lucide-react';
 
 export const eventServices: EventService[] = [
   {
@@ -42,7 +42,7 @@ export const eventServices: EventService[] = [
     name: 'Cocktail Services',
     description: 'Professional mixologists crafting signature cocktails and mocktails for your special events.',
     imageUrl: 'https://images.pexels.com/photos/2531186/pexels-photo-2531186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    icon: 'Cocktail'
+    icon: 'Wine'
   }
 ];
 
@@ -60,8 +60,6 @@ export const getIconComponent = (iconName: string) => {
       return Coffee;
     case 'Wine':
       return Wine;
-    case 'Cocktail':
-      return Cocktail;
     default:
       return Gift;
   }
