@@ -6,7 +6,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Atuhaire Joel',
     role: 'Director',
     bio: 'Founder of Fruity Gulp with over 10 years in the hospitality industry. Joel is passionate about providing the freshest, highest quality beverages and exceptional service.',
-    src: '/media/director.png', // Corrected syntax
+    imageUrl: '/media/director.png',
     socialLinks: {
       facebook: 'https://facebook.com',
       instagram: 'https://instagram.com',
@@ -29,7 +29,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Bwambale Benson',
     role: 'Operations Manager',
     bio: 'With his keen eye for detail, Benson oversees daily operations and ensures that quality standards are consistently met throughout all services.',
-    src: '/media/operations manager.png', // Corrected syntax
+    imageUrl: '/media/operations manager.png',
     socialLinks: {
       facebook: 'https://facebook.com',
       linkedin: 'https://linkedin.com'
