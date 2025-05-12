@@ -72,7 +72,7 @@ const AboutSection: React.FC = () => {
               <img 
                 src="/media/about image.jpg" 
                 alt="Fruity Gulp Store" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-900/70 to-transparent flex items-end">
                 <div className="p-6">
