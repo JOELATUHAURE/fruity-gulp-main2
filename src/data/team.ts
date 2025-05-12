@@ -3,10 +3,10 @@ import { TeamMember } from '../types';
 export const teamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Sarah Namara',
+    name: 'Atuhaire Joel',
     role: 'Director',
-    bio: 'Founder of Fruity Gulp with over 10 years in the hospitality industry. Sarah is passionate about providing the freshest, highest quality beverages and exceptional service.',
-    imageUrl: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    bio: 'Founder of Fruity Gulp with over 10 years in the hospitality industry. Joel is passionate about providing the freshest, highest quality beverages and exceptional service.',
+    imageUrl: '/media/director.png',
     socialLinks: {
       facebook: 'https://facebook.com',
       instagram: 'https://instagram.com',
@@ -26,10 +26,10 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: '3',
-    name: 'Grace Atwine',
+    name: 'Bwambale Benson',
     role: 'Operations Manager',
-    bio: 'With her keen eye for detail, Grace oversees daily operations and ensures that quality standards are consistently met throughout all services.',
-    imageUrl: 'https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    bio: 'With his keen eye for detail, Benson oversees daily operations and ensures that quality standards are consistently met throughout all services.',
+    imageUrl: '/media/operations manager.png',
     socialLinks: {
       facebook: 'https://facebook.com',
       linkedin: 'https://linkedin.com'
