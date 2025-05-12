@@ -70,7 +70,7 @@ const AboutSection: React.FC = () => {
           >
             <div className="relative h-80 md:h-96 overflow-hidden rounded-2xl shadow-lg">
               <img 
-                src="https://images.pexels.com/photos/5949900/pexels-photo-5949900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="/media/about image.jpg" 
                 alt="Fruity Gulp Store" 
                 className="w-full h-full object-cover"
               />
