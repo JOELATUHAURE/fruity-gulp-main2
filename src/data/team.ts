@@ -7,6 +7,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Director',
     bio: 'Founder of Fruity Gulp with over 10 years in the hospitality industry. Joel is passionate about providing the freshest, highest quality beverages and exceptional service.',
     imageUrl: '/media/director.png',
+    imageStyle: { objectPosition: 'center top' }, // Adjust image position
     socialLinks: {
       facebook: 'https://facebook.com',
       instagram: 'https://instagram.com',
@@ -30,6 +31,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Operations Manager',
     bio: 'With his keen eye for detail, Benson oversees daily operations and ensures that quality standards are consistently met throughout all services.',
     imageUrl: '/media/operations manager.png',
+    imageStyle: { objectPosition: 'center top' }, // Adjust image position
     socialLinks: {
       facebook: 'https://facebook.com',
       linkedin: 'https://linkedin.com'
@@ -37,10 +39,12 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: '4',
-    name: 'Joseph Byamugisha',
+    name: 'Arinanye Alex',
     role: 'Head of Events',
     bio: 'Joseph brings creativity and precision to every event. His extensive experience in event planning ensures memorable experiences for all clients.',
-    imageUrl: 'https://images.pexels.com/photos/8960464/pexels-photo-8960464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+   //mageUrl: 'https://images.pexels.com/photos/8960464/pexels-photo-8960464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+   imageUrl: '/media/events manager.jpeg',
+   imageStyle: { objectPosition: 'center top' }, // Adjust image position
     socialLinks: {
       instagram: 'https://instagram.com'
     }
