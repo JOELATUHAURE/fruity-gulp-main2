@@ -98,7 +98,7 @@ const LocationSection: React.FC = () => {
           >
             <div className="h-full min-h-[400px] rounded-xl overflow-hidden shadow-md relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.898944693815!2d30.648888500000002!3d-0.6150000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d93f6eb2b05e4f%3A0xda0c4a15f19550dd!2sMbarara%2C%20Uganda!5e0!3m2!1sen!2sus!4v1677677932186!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.594698155673!2d30.660039773723618!3d-0.6066253352583644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d91b86e67699a7%3A0x5830aaad20853da8!2sFruity%20Gulp%20Juice!5e0!3m2!1sen!2sug!4v1747179611294!5m2!1sen!2sug" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
