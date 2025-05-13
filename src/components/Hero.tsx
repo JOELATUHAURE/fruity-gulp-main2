@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ onOrderClick, onBookingClick }) => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mb-6 inline-block"
           >
-            <img src="/favicon.svg" alt="Fruity Gulp Logo" className="w-24 h-24 mx-auto animate-float" />
+            <img src="/media/favicon.png" alt="Fruity Gulp Logo" className="w-24 h-24 mx-auto animate-float" />
           </motion.div>
 
           <motion.h1 

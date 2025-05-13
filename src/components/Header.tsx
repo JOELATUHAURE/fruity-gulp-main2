@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ onBookingClick }) => {
           className="flex items-center"
         >
           <a href="#home" className="flex items-center">
-            <img src="/favicon.svg" alt="Fruity Gulp Logo" className="h-10 w-10" />
+            <img src="/media/favicon.png" alt="Fruity Gulp Logo" className="h-10 w-10" />
             <span className={`ml-2 text-xl font-heading font-bold ${isScrolled ? 'text-primary-500' : 'text-white'}`}>
               Fruity Gulp
             </span>

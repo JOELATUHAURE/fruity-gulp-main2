@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-6">
-              <img src="/favicon.svg" alt="Fruity Gulp Logo" className="h-10 w-10" />
+              <img src="/media/favicon.png" alt="Fruity Gulp Logo" className="h-10 w-10" />
               <span className="ml-2 text-xl font-heading font-bold text-primary-500">
                 Fruity Gulp
               </span>
