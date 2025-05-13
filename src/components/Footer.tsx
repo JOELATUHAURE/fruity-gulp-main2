@@ -1,5 +1,6 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter, Send, TikTok } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Send } from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa'; // Use react-icons for TikTok
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -29,7 +30,7 @@ const Footer: React.FC = () => {
                 <Twitter size={20} />
               </a>
               <a href="https://www.tiktok.com/@fruitygulpjuice?_t=ZM-8urgeMh1D0R&_r=1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
-                <TikTok size={20} />
+                <FaTiktok size={20} />
               </a>
             </div>
           </div>
