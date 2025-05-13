@@ -79,7 +79,7 @@ const LocationSection: React.FC = () => {
               
               <div className="mt-8">
                 <a 
-                  href="https://goo.gl/maps/T93oFQKqXnxGBxYS6" 
+                  href="https://maps.app.goo.gl/Adx5FiS1oq84hxBu5" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary w-full flex justify-center"
