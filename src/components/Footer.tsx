@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter, Send } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Send, TikTok } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -19,14 +19,17 @@ const Footer: React.FC = () => {
               Premium fresh juice & smoothie shop in Mbarara City. We also provide professional event services.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=100063763727233&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary-500 transition-colors">
+              <a href="https://www.instagram.com/fruitygulpjuice?igsh=YzljYTk1ODg3Zg==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary-500 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://x.com/FruityGulpJuice?t=FLZNN8U767Q_V8G3JCDNRg&s=09" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Twitter size={20} />
+              </a>
+              <a href="https://www.tiktok.com/@fruitygulpjuice?_t=ZM-8urgeMh1D0R&_r=1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
+                <TikTok size={20} />
               </a>
             </div>
           </div>
