@@ -1,0 +1,16 @@
+{
+  "name": "Fruity Gulp Juice",
+  "short_name": "Fruity Gulp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#ffb347",
+  "description": "Fresh fruit juice & smoothie shop in Mbarara City.",
+  "icons": [
+    {
+      "src": "/media/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
