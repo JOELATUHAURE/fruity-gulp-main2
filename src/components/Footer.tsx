@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Facebook, Instagram, Twitter, Send } from 'lucide-react';
 import { FaTiktok } from 'react-icons/fa'; // Use react-icons for TikTok
+import emailjs from 'emailjs-com';
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -72,26 +75,46 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-4">
               Subscribe to our newsletter for promotions, news and updates.
             </p>
-            <form className="flex">
+            <form className="flex" onSubmit={async (e) => {
+              e.preventDefault();
+              setStatus('sending');
+              const SERVICE_ID = 'service_jmgk3pj';
+              const TEMPLATE_ID = 'template_ruwwxwh';
+              const USER_ID = '9K3ebWUZbP9pmqH3H';
+              try {
+                await emailjs.send(SERVICE_ID, TEMPLATE_ID, { newsletter_email: email }, USER_ID);
+                setStatus('success');
+                setEmail('');
+              } catch (error) {
+                setStatus('error');
+              }
+            }}>
               <input 
                 type="email" 
                 placeholder="Your email address" 
                 className="px-4 py-2 rounded-l-full text-dark-700 w-full focus:outline-none"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                required
+                disabled={status === 'sending'}
               />
               <button 
                 type="submit" 
                 className="bg-primary-500 hover:bg-primary-600 rounded-r-full px-4 flex items-center justify-center transition-colors"
                 aria-label="Subscribe"
+                disabled={status === 'sending'}
               >
                 <Send size={18} />
               </button>
+              {status === 'success' && <span className="ml-2 text-green-500">Subscribed!</span>}
+              {status === 'error' && <span className="ml-2 text-red-500">Error. Try again.</span>}
             </form>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {currentYear} Fruity Gulp. All rights reserved.
+            {currentYear} Fruity Gulp. All rights reserved.
           </p>
           <div className="text-gray-500 text-sm flex flex-wrap gap-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
