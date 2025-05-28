@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CalendarClock, Phone } from 'lucide-react';
+import { X, CalendarClock, Phone, Mail } from 'lucide-react';
 import { eventServices } from '../data/events';
 import { Toast } from './ui/Toast';
+import emailjs from 'emailjs-com';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -11,6 +12,8 @@ interface BookingModalProps {
 }
 
 const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialService }) => {
+  // Add state for email sending feedback
+  const [emailStatus, setEmailStatus] = useState<'idle' | 'sending' | 'success' | 'error'>("idle");
   const [formData, setFormData] = useState({
     eventType: '',
     date: '',
@@ -62,6 +65,36 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialSer
 
   const handleCall = () => {
     window.location.href = 'tel:+256780844955';
+  };
+
+  // EmailJS handler
+  const handleEmailRequest = async () => {
+    setEmailStatus('sending');
+    // Replace with your EmailJS Service ID, Template ID, and User/Public Key
+    const SERVICE_ID = 'service_jmgk3pj';
+    const TEMPLATE_ID = 'template_ruwwxwh';
+    const USER_ID = '9K3ebWUZbP9pmqH3H';
+
+    // Prepare the template params (matching your EmailJS template fields)
+    const templateParams = {
+      event_type: formData.eventType,
+      date: formData.date,
+      location: formData.location,
+      guests: formData.guests,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      notes: formData.notes,
+    };
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID);
+      setEmailStatus('success');
+      setShowToast(true);
+      onClose();
+    } catch (error) {
+      setEmailStatus('error');
+      setShowToast(true);
+    }
   };
 
   // Get tomorrow's date in YYYY-MM-DD format for the min date attribute
@@ -243,8 +276,18 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialSer
                           <Phone size={20} className="mr-2" />
                           Call to Get Quote
                         </button>
+                        <button
+                          type="button"
+                          onClick={handleEmailRequest}
+                          className="w-full btn-accent py-4 flex items-center justify-center"
+                          disabled={emailStatus === 'sending'}
+                        >
+                          <Mail size={20} className="mr-2" />
+                          {emailStatus === 'sending' ? 'Sending Email...' : 'Request Quote via Email'}
+                        </button>
                         <p className="text-xs text-gray-500 text-center">
-                          You'll be redirected to WhatsApp to finalize your request.
+                          You'll be redirected to WhatsApp to finalize your request.<br/>
+                          Or, use Call/Email options above.
                         </p>
                       </div>
                     </div>
@@ -257,10 +300,16 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialSer
       </AnimatePresence>
       
       {showToast && (
-        <Toast 
-          message="Your booking request has been prepared. Complete your request in WhatsApp!"
-          onClose={() => setShowToast(false)}
-          type="success"
+        <Toast
+          message={
+            emailStatus === 'success'
+              ? 'Your booking request has been sent via Email!'
+              : emailStatus === 'error'
+              ? 'Failed to send email. Please try again.'
+              : 'Your booking request has been prepared. Complete your request in WhatsApp!'
+          }
+          onClose={() => { setShowToast(false); setEmailStatus('idle'); }}
+          type={emailStatus === 'success' ? 'success' : emailStatus === 'error' ? 'error' : 'success'}
         />
       )}
     </>
