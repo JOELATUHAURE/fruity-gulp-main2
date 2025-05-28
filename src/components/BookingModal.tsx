@@ -16,6 +16,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialSer
   const [emailStatus, setEmailStatus] = useState<'idle' | 'sending' | 'success' | 'error'>("idle");
   const [formData, setFormData] = useState({
     eventType: '',
+    serviceType: '',
     date: '',
     location: '',
     guests: 1,
@@ -78,6 +79,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialSer
     // Prepare the template params (matching your EmailJS template fields)
     const templateParams = {
       event_type: formData.eventType,
+      service_type: formData.serviceType,
       date: formData.date,
       location: formData.location,
       guests: formData.guests,
@@ -151,6 +153,24 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialSer
                           className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
                           required
                         >
+                          <option value="">Select event type</option>
+                          <option value="Wedding / Introduction & Give away">Wedding / Introduction & Give away</option>
+                          <option value="Graduation">Graduation</option>
+                          <option value="Birthdays">Birthdays</option>
+                          <option value="Thanks giving">Thanks giving</option>
+                        </select>
+
+                        <label className="block text-sm font-medium text-gray-700 mb-1 mt-6">
+                          Service
+                        </label>
+                        <select 
+                          name="serviceType"
+                          value={formData.serviceType || ''}
+                          onChange={handleChange}
+                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500"
+                          required
+                        >
+                          <option value="">Select service</option>
                           {eventServices.map(service => (
                             <option key={service.id} value={service.name}>{service.name}</option>
                           ))}
