@@ -23,7 +23,7 @@ const TermsOfService: React.FC = () => {
       <h2 className="text-xl font-semibold mt-6 mb-2">Event Bookings</h2>
       <ul className="list-disc ml-6 mb-4">
         <li>Bookings for events should be made in advance to ensure availability.</li>
-        <li>Cancellations must be communicated at least 48 hours before the event for a full refund.</li>
+        <li>Cancellations must be communicated at least one week before the event for a refund.</li>
       </ul>
       <h2 className="text-xl font-semibold mt-6 mb-2">Liability</h2>
       <p className="mb-4">Fruity Gulp is not liable for delays or failures caused by circumstances beyond our control, such as weather or supplier issues.</p>
