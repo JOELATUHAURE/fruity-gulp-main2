@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const TermsOfService: React.FC = () => (
-  <section className="min-h-screen bg-white py-12">
-    <div className="container mx-auto px-4 max-w-3xl">
-      <h1 className="text-3xl font-bold mb-6 text-primary-600">Terms of Service</h1>
+const TermsOfService: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  return (
+    <section className="min-h-screen bg-white py-12 flex flex-col justify-between">
+      <div className="container mx-auto px-4 max-w-3xl">
+        <Link to="/" className="inline-block mb-6 text-primary-600 hover:underline font-semibold border border-primary-600 px-4 py-2 rounded transition-colors">&larr; Back to Home</Link>
+        <h1 className="text-3xl font-bold mb-6 text-primary-600">Terms of Service</h1>
       <p className="mb-4">Welcome to Fruity Gulp! By using our services, you agree to the following terms and conditions. Please read them carefully.</p>
       <h2 className="text-xl font-semibold mt-6 mb-2">Services Offered</h2>
       <ul className="list-disc ml-6 mb-4">
@@ -26,7 +30,11 @@ const TermsOfService: React.FC = () => (
       <h2 className="text-xl font-semibold mt-6 mb-2">Contact</h2>
       <p>If you have questions about these terms, please visit us at our shop in the outskirts of Mbarara City opposite former Radio West next to La Grande Mall, or call +256780844955.</p>
     </div>
+    <footer className="w-full text-center py-6 border-t border-gray-200 mt-8 text-gray-500 text-sm">
+      &copy; {currentYear} Fruity Gulp. All rights reserved.
+    </footer>
   </section>
-);
+  );
+};
 
 export default TermsOfService;
