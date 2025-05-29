@@ -32,29 +32,38 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Toaster />
-      <Header onBookingClick={handleBookingClick} />
-      <Hero onOrderClick={() => handleOrderClick(null)} onBookingClick={handleBookingClick} />
-      <JuiceMenu onOrderClick={handleOrderClick} />
-      <EventsSection onBookingClick={handleBookingClick} />
-      <AboutSection />
-      <TeamSection />
-      <ReviewsSection />
-      <LocationSection />
-      <Footer />
-      
-      <OrderModal 
-        isOpen={isOrderModalOpen} 
-        onClose={() => setIsOrderModalOpen(false)}
-        product={selectedProduct}
-      />
-      
-      <BookingModal 
-        isOpen={isBookingModalOpen} 
-        onClose={() => setIsBookingModalOpen(false)} 
-      />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="min-h-screen bg-white">
+              <Toaster />
+              <Header onBookingClick={handleBookingClick} />
+              <Hero onOrderClick={() => handleOrderClick(null)} onBookingClick={handleBookingClick} />
+              <JuiceMenu onOrderClick={handleOrderClick} />
+              <EventsSection onBookingClick={handleBookingClick} />
+              <AboutSection />
+              <TeamSection />
+              <ReviewsSection />
+              <LocationSection />
+              <Footer />
+              <OrderModal
+                isOpen={isOrderModalOpen}
+                onClose={() => setIsOrderModalOpen(false)}
+                product={selectedProduct}
+              />
+              <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+              />
+            </div>
+          }
+        />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
