@@ -27,7 +27,7 @@ export const eventServices: EventService[] = [
     id: 'juice-cocktail-coffee-ushering',
     name: 'Juice, cocktails, coffee & ushering',
     description: 'Full service: juice, cocktails, coffee bar, and ushering.',
-    imageUrl: '/media/juice-cocktail-ushering.png',
+    imageUrl: '/media/juice-chai-na-ushering.png',
     icon: 'Gift'
   },
   {
