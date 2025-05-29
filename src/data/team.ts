@@ -51,10 +51,10 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: '5',
-    name: 'Olivia Kansiime',
-    role: 'Barista Lead',
-    bio: 'Award-winning barista who leads our coffee service team. Olivia is passionate about crafting the perfect cup and training our skilled barista team.',
-    imageUrl: 'https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    name: 'Najuna Edgar',
+    role: 'Mixologist',
+    bio: 'Edgar is a talented mixologist known for his creativity and precision in crafting signature cocktails. With a passion for flavors and presentation, he ensures every drink is a memorable experience for our guests.',
+    imageUrl: '/media/mixologist.jpeg',
     socialLinks: {
       facebook: 'https://facebook.com',
       instagram: 'https://instagram.com'
