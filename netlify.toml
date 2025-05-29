@@ -18,4 +18,9 @@
   NODE_VERSION = "18"
 
 [site]
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
   domain = "fruitygulpjuice.com"
