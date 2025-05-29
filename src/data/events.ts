@@ -27,14 +27,14 @@ export const eventServices: EventService[] = [
     id: 'juice-cocktail-coffee-ushering',
     name: 'Juice, cocktails, coffee & ushering',
     description: 'Full service: juice, cocktails, coffee bar, and ushering.',
-    imageUrl: '/media/juice-chai-na-ushering.png',
+    imageUrl: '/media/juice-chai-na-ushering.webp',
     icon: 'Gift'
   },
   {
     id: 'juice-cocktail-ushering',
     name: 'Juice, cocktails & ushering',
     description: 'Juice, cocktail bar, and ushering for your event.',
-    imageUrl: '/media/juice-cocktail-ushering.png',
+    imageUrl: '/media/juice-cocktail-ushering.webp',
     icon: 'Users'
   },
   {
@@ -48,14 +48,14 @@ export const eventServices: EventService[] = [
     id: 'coffee-only',
     name: 'Coffee bar only',
     description: 'Coffee bar with premium brews and baristas.',
-    imageUrl: '/media/coffee-only.png',
+    imageUrl: '/media/coffee-only.webp',
     icon: 'Coffee'
   },
   {
     id: 'ushering-only',
     name: 'Ushering services only',
     description: 'Professional ushering team for your event.',
-    imageUrl: '/media/ushering-only.png',
+    imageUrl: '/media/ushering-only.webp',
     icon: 'Users'
   }
 ];
